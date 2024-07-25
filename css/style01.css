@@ -1,0 +1,145 @@
+:root {
+    --p: 10px;
+}
+
+ a{
+     text-decoration: none;
+     color: blue;
+ }
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CSS NAV */
+
+nav {
+    background-color: darkcyan;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu:first-child > li {
+    border-left: 1px solid white;
+}
+
+ul.menu > li > a {
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+}
+
+ul.menu > li > a:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* CSS HEADER */
+header {
+    background: linear-gradient(darkblue, blue);
+}
+
+h1.subject {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 3px 2px 1px whitesmoke;
+}
+
+/* CSS FOOTER */
+footer {
+    background-color: #0a6fa3;
+    color: white;
+}
+
+/* CSS BODY */
+.course {
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.course .title {
+    background-color: darkblue;
+    color: white;
+    padding: var(--p);
+    margin-bottom: 0;
+    border-radius: var(--p) var(--p) 0 0;
+}
+
+.avatar {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.forum {
+    padding: var(--p);
+    border-bottom: 1px solid white;
+    background-color: lightseagreen;
+}
+
+.forum:last-child {
+    border-radius: 0 0 var(--p) var(--p);
+}
+
+.forum > p:last-child {
+    direction: rtl;
+    font-style: italic;
+}
+
+/* CSS ADS */
+.ads > div {
+    width: 14%;
+    background: linear-gradient(darkblue, blue);
+    color: white;
+    text-align: center;
+    padding: 10rem 0;
+    border-radius: var(--p);
+    margin-top: 5px;
+    position: fixed;
+}
+
+.ads > div:first-child {
+    left: 0.5%;
+}
+
+.ads > div:last-child {
+    right: 0.5%;
+}
+
+/* CSS SUBCONTENT */
+.sub {
+    position: relative;
+}
+.subcontent {
+    display: none;
+    background-color: burlywood;
+    position: absolute;
+    z-index: 99999;
+    width: 200px;
+    right: 2%;
+}
+
+.subcontent::after {
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent burlywood transparent;
+    position: absolute;
+    bottom: 100%;
+    right: 10%;
+    
+}
+
+.sub:hover .subcontent {
+    display: block;
+}
